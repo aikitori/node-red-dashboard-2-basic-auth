@@ -1,6 +1,6 @@
 {
   "name": "@aikitori/node-red-dashboard-2-basic-auth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dashboard auth with http basic auth",
   "main": "index.js",
   "scripts": {
