@@ -20,5 +20,12 @@
     "plugins": {
         "node-red-dashboard-2-authelia-auth": "index.js"
       }
-  }
+  },
+  "dependencies": {
+    "@flowfuse/node-red-dashboard": "^1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aikitori/node-red-dashboard-2-basic-auth"
+  },
 }
