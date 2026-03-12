@@ -23,6 +23,7 @@ module.exports = function (RED) {
         // Just for debugging ... 
         // console.warn(`${JSON.stringify(headers)}`)
         const http_user = headers["x-forwarded-user"] || null
+        const http_role = headers["x-forwarded-role"] || null
         if (!http_user) {
           console.warn(
             `${plugin_name}: Session is not authenticated by Basic Auth; no user detected. See headers: ${JSON.stringify(
@@ -31,12 +32,15 @@ module.exports = function (RED) {
           );
         } else {
           console.log(
-            `${plugin_name}: Dashboard interacted with by ${http_user}`
+            `${plugin_name}: Dashboard interacted with by ${http_user}${http_role ? ` (${http_role})` : ""}`
           );
         }
         user.host = headers["host"] || null;
         user.agent = headers["user-agent"] || null;
         user.userId =  http_user
+        if (http_role) {
+            user.role = http_role;
+        }
         user.provider = "HTTP Basic Auth";
         msg._client["user"] = user;
         return msg;

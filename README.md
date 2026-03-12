@@ -5,8 +5,9 @@
 
 ## Configuration
 
-Configure your Webserver, that the http user is added to the request header key "X-Forwarded-User"
-See [here](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) how to cofigure nginx for example
+Configure your Webserver, that the http user is added to the request header key "X-Forwarded-User".
+See [here](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) how to cofigure nginx for example.
+Optionally, your Webserver can send a role in the request header key "X-Forwarded-Role".
 
 ## Example
 
