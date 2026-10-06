@@ -1,10 +1,10 @@
 {
   "name": "@aikitori/node-red-dashboard-2-basic-auth",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Dashboard auth with http basic auth",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Fabian",
   "license": "AGPL-3.0-or-later",
@@ -15,17 +15,17 @@
     "auth",
     "authentication"
   ],
-  "node-red" : {
+  "node-red": {
     "version": ">=3.1",
     "plugins": {
-        "node-red-dashboard-2-authelia-auth": "index.js"
-      }
-  },
-  "dependencies": {
-    "@flowfuse/node-red-dashboard": "^1.10"
+      "node-red-dashboard-2-basic-auth": "index.js"
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aikitori/node-red-dashboard-2-basic-auth"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
